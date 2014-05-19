@@ -2,14 +2,15 @@
 
 var express = require('express'),
   fs = require('fs'),
+  bodyParser = require('body-parser'),
   completecdnfinder = require("./lib/cdnfinder.js").completecdnfinder,
   hostnamefinder = require("./lib/hostnamefinder.js").hostnamefinder;
 
 
 
 
-var app = express.createServer();
-app.use(express.bodyParser());
+var app = express();
+app.use(bodyParser());
 app.post('/', function(req, res){
   console.log(new Date(), req.connection.remoteAddress)
   console.log(new Date(), req.body.url)
