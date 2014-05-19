@@ -25,4 +25,5 @@ git clone git@github.com:sajal/cdnfinder.js.git
 cd cdnfinder.js
 npm install step native-dns express connect body-parser
 npm start
+open "http://localhost:1337"
 ```
